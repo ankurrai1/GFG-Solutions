@@ -1,2 +1,2 @@
 # GFG-Solutions
-This repo will contain the proble solution of GFG problems 
+This repo will contain the solution of GFG problems 
