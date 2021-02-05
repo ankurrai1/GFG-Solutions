@@ -2,6 +2,7 @@
 This repo will contain the solution of GFG problems
 
 ### Topics will be
+
 ```
 1   Mathematics                       
 2   Bit Magic                         
@@ -26,5 +27,5 @@ This repo will contain the solution of GFG problems
 21. Trie                             
 22. Segment and Binary Indexed Trees
 23. Disjoint Set   
-                  
+
 ```
