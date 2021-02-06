@@ -24,9 +24,17 @@ int factorialTrallingZero(long n){
     return min(twoCount, fiveCount);
 }
 
+int factorialTrallingZeroUseing5(long n){
+    int res = 0;
+    for(long i = 5; i <= n; i*=5){ // here we are useing 5 Factorization
+        res += n / i;              // method every no 5s multipul will have that much no of 5;
+    }
+    return res;
+}
+
 int main(){
     long num;
     cin >> num;
-    cout << factorialTrallingZero(num) << endl;
+    cout << factorialTrallingZero(num) << "   " << factorialTrallingZeroUseing5(num) <<endl;
     return 0;
 }
