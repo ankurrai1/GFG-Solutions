@@ -2,17 +2,16 @@
 This repo will contain the solution of GFG problems
 
 ### Topics will be
-
 ```
-1   Mathematics                       
-2   Bit Magic                         
-3   Recursion                         
-4   Arrays	     	                     
-5   Searching                         
-6   Sorting                           
-7   Matrix                            
-8   Hashing                           
-9   Strings                           
+ 1. Mathematics                       
+ 2. Bit Magic                         
+ 3. Recursion                         
+ 4. Arrays	     	                     
+ 5. Searching                         
+ 6. Sorting                           
+ 7. Matrix                            
+ 8. Hashing                           
+ 9. Strings                           
 10. Linked List                      
 11. Stack  	                         
 12. Queue     	                     
@@ -26,6 +25,6 @@ This repo will contain the solution of GFG problems
 20. Dynamic Programming              
 21. Trie                             
 22. Segment and Binary Indexed Trees
-23. Disjoint Set   
+23. Disjoint Set
 
 ```
