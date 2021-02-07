@@ -43,15 +43,13 @@ void printPrime(int n){
 
 void printPrimeOpt(int n){
   vector<bool> isPrimes(n+1,true);
-  for(int i = 2; i * i <= n; i++){
+  for(int i = 2; i <= n; i++){
     if(isPrimes[i]){
+      cout << i << " ";
       for(int j = i*i; j <= n; j += i){
         isPrimes[j] = false;
       }
     }
-  }
-  for(int i = 2; i <= n; i++){
-    if(isPrimes[i]) cout << i << " ";
   }
 }
 
@@ -63,12 +61,13 @@ int main(){
 
     int num;
     cin >> num;
+    cout << "\n-------------------- NEXT TEST CASE -------------------------\n";
     printPrimesNaive(num);
     cout << "\n-----------------------------------------\n";
     printPrime(num);
     cout << "\n-----------------------------------------\n";
     printPrimeOpt(num);
-    cout << "\n-------------------- NEXT TEST CASE -------------------------\n";
+
 
   }
   return 0;
