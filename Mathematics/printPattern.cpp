@@ -23,3 +23,18 @@ void printPat(int n)
         cout <<"$";
     }
 }
+
+
+//Another solution
+
+int c = n;
+while (n){
+    for (int i = c; i > 0; i--){
+        for (int j = n; j > 0; j--){
+            cout << i << " ";
+        }
+    }
+    n--;
+    cout << "$";
+}
+}
