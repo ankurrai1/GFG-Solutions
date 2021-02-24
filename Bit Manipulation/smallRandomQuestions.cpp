@@ -31,3 +31,9 @@ unsigned int getFirstSetBit(int n){
     }
     return -1;
 }
+
+int greyConverter(int n)
+{
+    int a = n >> 1;
+    return (n ^ a);
+}
