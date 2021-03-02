@@ -12,3 +12,4 @@ string armstrongNumber(int n){
        if(sum == n) return "Yes";
        else return "No";
    }
+   
