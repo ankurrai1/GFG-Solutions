@@ -37,3 +37,9 @@ int greyConverter(int n)
     int a = n >> 1;
     return (n ^ a);
 }
+
+// find first and only set bit position starting 1
+int findPosition(int N) {
+        if(N & (N -1) || N <= 0) return -1;
+        return (int)log2(N) +1;
+    }
