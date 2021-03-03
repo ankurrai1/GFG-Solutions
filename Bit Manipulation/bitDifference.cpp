@@ -5,7 +5,6 @@ using namespace std;
 int getbitDiff(int a, int b){
     int countDiffBits = 0;
     while(a||b){
-        cout << (a & 1) << " " << (b & 1) << endl;
         if((a & 1) ^ (b & 1)) countDiffBits++;
         a >>= 1;
         b >>= 1;
