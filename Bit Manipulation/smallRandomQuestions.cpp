@@ -17,7 +17,6 @@ unsigned int getFirstSetBit(int n){
     return log2(n & (-n)) + 1;
 }
 
-
  // Function to find the first position with different bits
 
  int posOfRightMostDiffBit(int m, int n)
