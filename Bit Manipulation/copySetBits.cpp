@@ -20,6 +20,13 @@ int getCopiedBits(int a, int b, int l, int r){
 
 }
 
+// constant time solution for
+int getCopiedBits(int a, int b, int l, int r){
+    int pattern = (1<< (r - l + 1)) - 1; // creating pattern of sizeof r - l with only 1's
+    pattern <<= (l - 1); // shifting pattern to that position
+    return (a | (pattern & b)); // you can understand other wise leave coding
+}
+
 int main(){
     int x = 8, y = 7, l = 1, r = 2;
     cout << getCopiedBits(x, y, l, r) << endl;
