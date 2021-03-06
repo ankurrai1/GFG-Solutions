@@ -4,7 +4,9 @@ using namespace std;
 
 int devide(long long dividend, long long divisor){
     int sign = 1;
-    if(divisor < 0 || dividend < 0) sign = -1;
+    if(divisor < 0 && dividend > 0) sign = -1;
+    else if(divisor > 0 && dividend < 0) sign = -1;
+    
     long long q = 0, t = 0;
     dividend = abs(dividend);
     divisor = abs(divisor);
