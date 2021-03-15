@@ -1,7 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-
 vector <string> generateCode(int N)
 {
     vector<string> res;
