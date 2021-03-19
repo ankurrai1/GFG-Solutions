@@ -10,10 +10,11 @@ bool isPalindrom(string str, int s, int e){
 }
 
 int main()
-{
+{   // string , startPoint(0), endPoint(str.length -1)
     cout << isPalindrom("aaabbbbaaa", 0, 9) << endl;
     cout << isPalindrom("ankur", 0, 4) << endl;
-    cout << isPalindrom("", 0, 0) << endl;
+    cout << isPalindrom("a", 0, 0) << endl;
+    cout << isPalindrom("", 0, -1) << endl;
     cout << isPalindrom("aaaaaa", 0, 5) << endl;
     cout << isPalindrom("aaabbbbaa", 0, 8) << endl;
 
