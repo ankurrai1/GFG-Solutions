@@ -36,7 +36,7 @@ public:
 };
 
 
-// gfg Solution given
+// gfg Solution given = 0.5
 
 class Solution {
 public:
@@ -67,6 +67,7 @@ public:
                 a[i][j] = arr[i][j];
             }
         }
+        // if we remove this all with memset(dp, -1, sizeof(dp)) submition time  = 0.17
         for(i=0;i<n;i++)
                 for(j=0;j<n;j++)
                     for(l=0;l<=k;l++)
@@ -75,3 +76,35 @@ public:
         return dp[n-1][n-1][k];
     }
 }
+
+
+// for same go code as following my logic is correct but problem is with vector passing
+// changed above in to following and it is not giving TLE
+
+public:
+    long long dp[101][101][101];
+
+    long long go(int n,int m,int k, vector<vector<int>> a)
+    {
+        if(k<0)
+            return 0;
+        if(m<0||n<0)
+            return 0;
+        if(n==0&&m==0)
+            return dp[n][m][k]=(k==a[n][m]);
+        if(dp[n][m][k]!=-1)
+            return dp[n][m][k];
+
+        long long left = go(n,m-1,k-a[n][m], a);
+        long long up = go(n-1,m,k-a[n][m], a);
+        return dp[n][m][k] = left + up;
+    }
+
+    long long numberOfPath(int n, int k, vector<vector<int>> arr){
+
+        int i,j,l,m,t;
+        memset(dp, -1, sizeof(dp));
+        go(n-1,n-1,k,arr);
+        return dp[n-1][n-1][k];
+    }
+};
