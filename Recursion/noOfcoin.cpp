@@ -36,7 +36,7 @@ public:
 };
 
 
-// gfg Solution given = 0.5
+// gfg Solution given = 0.05 sec
 
 class Solution {
 public:
@@ -67,7 +67,7 @@ public:
                 a[i][j] = arr[i][j];
             }
         }
-        // if we remove this all with memset(dp, -1, sizeof(dp)) submition time  = 0.17
+        // if we remove this all with memset(dp, -1, sizeof(dp)) submition time  = 0.17 sec
         for(i=0;i<n;i++)
                 for(j=0;j<n;j++)
                     for(l=0;l<=k;l++)
@@ -108,3 +108,6 @@ public:
         return dp[n-1][n-1][k];
     }
 };
+
+
+// all solution are provided to make you understand how time complexity depends on pre definded and array over vector
