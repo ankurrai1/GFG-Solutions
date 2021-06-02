@@ -2,24 +2,29 @@
 
 using namespace std;
 
-int minimumSubArraySum(int arr[], int n){
-    int mn = arr[0], mnSf = arr[0];
-    for(int i = 0; i < n; i++){
-        mnSf = min(arr[i], mnSf + arr[i]);
-        mn = min(mn, mnSf);
+int maxSubArraySum(int arr[], int n){
+    int mx = arr[0], mxSf = arr[0];
+    for(int i = 1; i < n; i++){
+        mxSf = max(arr[i], mxSf + arr[i]);
+        mx = max(mx, mxSf);
     }
-    return min(mn, mnSf);
+    return max(mx, mxSf);
 }
 
 int maximumCircularSubArraySum(int arr[], int n){
+    int maxSum = maxSubArraySum(arr, n);
+    if(maxSum < 0) return maxSum;
     int totalSum = 0;
-    for(int i = 0; i < n; i++) totalSum += arr[i];
-    int minSum = minimumSubArraySum(arr, n);
+    for(int i = 0; i < n; i++) {
+        totalSum += arr[i];
+        arr[i] = -arr[i];
+    };
+    int minSum = maxSubArraySum(arr, n) * -1;
     return totalSum - minSum;
 }
 
 int main(){
-  int arr[] = {3, -4, 5, 6, -8, 7};
+  int arr[] = {-3, -4, -5, -6, -8, -7};
   int n = 6;
   int res1 = maximumCircularSubArraySum(arr, n);
   cout << res1 << endl;
