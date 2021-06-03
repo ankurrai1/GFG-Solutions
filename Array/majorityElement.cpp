@@ -36,8 +36,8 @@ int main(){
   int n2 = 5;
   findMajorityElement(arr2, n2);
 
-  int arr3[] =  {10, 20, 30, 40, 50, 50, 50,};
-  int n3 = 5;
+  int arr3[] =  {10, 20, 30, 40, 50, 50, 50};
+  int n3 = 7;
   findMajorityElement(arr3, n3);
 
   return 0;
