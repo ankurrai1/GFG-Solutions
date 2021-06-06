@@ -6,8 +6,8 @@ int getMaxFrequentEle(int left[], int right[], int n){
     vector<int> points(1000, 0);
 
     for(int i = 0; i < n; i++){
-        points[left[i]] = 1;
-        points[right[i]] = -1;
+        points[left[i]]++;
+        points[right[i]+1]--;
     }
     int max = 0; int ele = -1, sum = 0;
     for(int i = 1; i < 1000; i++){
