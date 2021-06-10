@@ -19,13 +19,13 @@ int maximumCircularSubArraySum(int arr[], int n){
         totalSum += arr[i];
         arr[i] = -arr[i];
     };
-    int minSum = maxSubArraySum(arr, n) * -1;
-    return totalSum - minSum;
+    int minSum = maxSubArraySum(arr, n);
+    return max(totalSum + minSum, maxSum);
 }
 
 int main(){
-  int arr[] = {-3, -4, -5, -6, -8, -7};
-  int n = 6;
+  int arr[] = {-3, -18, -22, -21, -17, 16, -14, 28, -22};
+  int n = 9;
   int res1 = maximumCircularSubArraySum(arr, n);
   cout << res1 << endl;
 
