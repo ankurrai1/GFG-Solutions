@@ -1,10 +1,9 @@
-// Given a sorted array of positive integers. Your task is to rearrange
-// the array elements alternatively i.e first element should be max value,
-// second should be min value, third should be second max, fourth should be second min and so on.
-
+// Given a sorted array of positive integers. Your task is to rearrange  the array elements alternatively i.e first element should be max value, second should be min value, third should be second max, fourth should be second min and so on.
 #include <bits/stdc++.h>
 
 using namespace std;
+
+#define ll long long
 
 //Basic logic
 // put some dividend at every i so that if we divide by divisor we will get 1 value as Quotient and if we take MOD we will get second value as Remainder;
@@ -49,8 +48,7 @@ void rearrange(ll *arr, int n)
 }
 
 void printArray(ll *arr, int n){
-    int i;
-    f(i, 0 , n){
+    for(int i = 0; i < n; i++){
         cout << arr[i] << " ";
     }
     cout << endl;
