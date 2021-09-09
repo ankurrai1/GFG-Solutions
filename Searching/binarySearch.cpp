@@ -36,3 +36,35 @@ int main(){
   cout << binarySearch(arr, elementToSearch, n) << endl;
   return 0;
 }
+
+// UPGRADED VERSION
+
+int binarySearch(int arr[], int ele, int end, int start = 0){
+    if(start <= end){
+        int mid = (start + end) / 2;
+        if(arr[mid] == ele) return mid;
+        if( arr[mid] > ele) return binarySearch(arr, ele, mid-1, start);
+        else return binarySearch(arr, ele, end, mid+1);
+    }
+    return -1;
+}
+
+// binary Search using while loop
+int binarySearchLoop(int arr[], int ele, int n){
+    int start = 0, end= n -1, mid;
+    while(start <= end){
+        mid = (start + end) / 2;
+        if(arr[mid] == ele) return mid;
+        if( arr[mid] > ele) end = mid - 1;
+        else start = mid + 1;
+    }
+    return -1;
+}
+
+int main(){
+  int n = 6, arr[]= {10, 12, 13, 15, 22, 27};
+  int elementToSearch = 22;
+  cout << binarySearchLoop(arr, elementToSearch, n) << endl;
+  cout << binarySearch(arr, elementToSearch, n-1) << endl;
+  return 0;
+}
